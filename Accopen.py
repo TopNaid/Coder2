@@ -1,93 +1,51 @@
 
 import random
-print("WELCOME TO JAIZ BANK")
-print ("1. Account Opening \n2. Transfer \n3. Internet \n4. Bill and Utility \n5. Airtime")
 
 def account_opening():
-        print("kindly follow the prompt below to open an account with us.")
-        # OPENING ACCOUNT
-        print("Account Type: \nA. Savings \nB. Current")
-        Acct_type = str(input(": "))
-        Title = str(input("Title: "))
-        Surname = str(input("Surname: "))
-        Name = str(input("First Name: "))
-        str(input("Residential Address: ")), str(input("Marital Status: "))
-        dateof_birth =(input("DOB (dd/mm/yyyy): "))
-        NIN =int(input("NIN: "))
-        Phone =int(input("Phone Number: "))
-        print(f"Dear {Title} {Surname},\nIt serves us pleasure to have you here. To complete your account, kindly upload your passport,NIN, and a current utility bill.\nHowever, your account is under process, expect your account details shortly. Thank you!! ")
-        print('>>>>>>LOADING..........................')
-        input("Click ENTER button! ")
-        
-        acctnm = (random.randrange(1100000000,9080999019))
-        print(f"We are pleased to inform you that your account has been successfully created. \nYour account number is:{acctnm} \nAccount Name:{Surname} {Name}")
-        return "Congratulations"
-account_opening()
+    print("kindly follow the prompt below to open an account with us.")
+    # OPENING ACCOUNT
+    print("Account Type: \nA. Savings \nB. Current")
+    Acct_type = str(input(": "))
+    Title = str(input("Title: "))
+    Surname = str(input("Surname: "))
+    Name = str(input("First Name: "))
+    str(input("Residential Address: ")), str(input("Marital Status: "))
+    dateof_birth =(input("DOB (dd/mm/yyyy): "))
+    NIN =int(input("NIN: "))
+    Phone =int(input("Phone Number: "))
+    print(f"Dear {Title} {Surname},\nIt serves us pleasure to have you here. To complete your account, kindly upload your passport,NIN, and a current utility bill.\nHowever, your account is under process, expect your account details shortly. Thank you!! ")
+    print('>>>>>>LOADING..........................')
+    input("Click ENTER button! ")
+    
+    acctnm = (random.randrange(1100000000,9080999019))
+    print(f"We are pleased to inform you that your account has been successfully created. \nYour account number is:{acctnm} \nAccount Name:{Surname} {Name}")
+    print("Congratulations")
+
 
 def transfer():
     print("TRANSFER")
     print("What bank do you want to transfer to? ")
     print("1. Access Bank \n2. First Bank \n3. Polaris Bank \n4. Opay \n5. Zenith Bank \n6. FCMB \n7. Other banks")
-    
-    response = str(input(" "))
-    if response == "1" or response == "Access Bank":
-        #Transfer to Access Bank
-        recipient_account_number = int(input("Enter recipient's account number "))
-        print("Confirming account name...")
-        amount = int(input("Enter the amount to be transferred:#"))
-        print(f"Transferring #{amount} to Access Bank account number {recipient_account_number}....")
-        print("Transfer Processing...")
-        print("Transfer Successful?????? \nThank you for banking with us!?")
-    elif response == "2" or response == "First Bank":
-        #Transfer to First Bank
-        recipient_account_number = int(input("Enter recipient's account number "))
-        print("Confirming account name...")
-        amount = int(input("Enter the amount to be transferred:#"))
-        print(f"Transferring #{amount} to First Bank account number {recipient_account_number}....")
-        print("Transfer Processing...")
-        print("Transfer Successful?????? \nThank you for banking with us!?")
-    elif response == "3" or response == "Polarris Bank":
-        #Transfer to Polaris Bank
-        recipient_account_number = int(input("Enter recipient's account number "))
-        print("Confirming account name...")
-        amount = int(input("Enter the amount to be transferred:#"))
-        print(f"Transferring #{amount} to Polaris Bank account number {recipient_account_number}....")
-        print("Transfer Processing...")
-        print("Transfer Successful?????? \nThank you for banking with us!?")
-    elif response == "4" or response == "Opay":
-        #Transfer to Opay
-        recipient_account_number = int(input("Enter recipient's account number "))
-        print("Confirming account name...")
-        amount = int(input("Enter the amount to be transferred:#"))
-        print(f"Transferring #{amount} to Opay account number {recipient_account_number}....")
-        print("Transfer Processing...")
-        print("Transfer Successful?????? \nThank you for banking with us!?")
-    elif response == "5" or response == "Zenith Bank":
-        #Transfer to Zenith Bank
-        recipient_account_number = int(input("Enter recipient's account number "))
-        print("Confirming account name...")
-        amount = int(input("Enter the amount to be transferred:#"))
-        print(f"Transferring #{amount} to Zenith Bank account number {recipient_account_number}....")
-        print("Transfer Processing...")
-        print("Transfer Successful?????? \nThank you for banking with us!?")
-    elif response == "6" or response == "FCMB":
-        #Transfer to Opay
-        recipient_account_number = int(input("Enter recipient's account number "))
-        print("Confirming account name...")
-        amount = int(input("Enter the amount to be transferred:#"))
-        print(f"Transferring #{amount} to FCMB account number {recipient_account_number}....")
-        print("Transfer Processing...")
-        print("Transfer Successful?????? \nThank you for banking with us!?")
-    elif response == "7" or response == "Other banks":
-        #Transfer to Other banks
-        bank_name = str(input("Search bank name: "))
-        recipient_account_number = int(input("Enter recipient's account number "))
-        print("Confirming account name...")
-        amount = int(input("Enter the amount to be transferred:#"))
-        print(f"Transferring #{amount} to {bank_name} account number {recipient_account_number}....")
-        print("Transfer Processing...")
-        return "Transfer Successful?????? \nThank you for banking with us!?"
-transfer()
+
+    farm = {"Access Bank":1, "First Bank":2,"Polaris Bank":3,"Opay":4, "Zenith Bank":5,"FCMB":6,"Other bank":7}
+    response = int(input("Enter Bank: "))
+    # assert len(response) == 1
+    for x in farm.values():
+        if response == x:
+            #Transfer to All Banks
+            recipient_account_number = int(input("Enter recipient's account number "))
+            # Ac = 11
+            # while recipient_account_number!= Ac:
+            print("Confirming account name...")
+            amount = int(input("Enter the amount to be transferred:#"))
+            print(f"Transferring N{amount} to Access Bank account number {recipient_account_number}....")
+            print("Transfer Processing...")
+            print("Transfer Successful?????? \nThank you for banking with us!?")
+
+            break
+    else:
+        print("Invalid Input")
+
 
 def Internet():
     print("Service Providers")
@@ -233,7 +191,7 @@ def Internet():
         print (f"{package} has been successfully delivered to {numb}")
     else: 
         return "Invalid input"
-Internet()
+
 
 def bills():
     print("Utility and Bill")
@@ -437,8 +395,8 @@ def bills():
         else:
             print("Invalid!!")
     else:
-        return "Invalid input! \nKindly enter the available package."
-bills()
+        print("Invalid input! \nKindly enter the available package.")
+
 
 def Airtime():
     print("Select Network Provider")
@@ -542,4 +500,3 @@ def Airtime():
             print(f"Purchasing airtime... \nAirtime recharge to {Phone_Number} was successful! \nThank you for banking with us?")
     else:
         return "INVALID REQUEST! \nCheck options and try again."
-Airtime()
